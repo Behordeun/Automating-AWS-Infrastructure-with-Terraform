@@ -5,10 +5,9 @@ provider "aws" {
 }
 
 #references
-resource "aws_instance" "my-first-server" {
-    ami = "ami-04505e74c0741db8d"
-    instance_type = "t2.micro"
-    tags = {
-         name = "ubuntu"
-    }
+resource "aws_vpc" "first-vpc" {
+  cidr_block = "10.0.0.0/16"
+  tags = {
+    Name = "production-vpc"
+  }
 }
