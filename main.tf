@@ -100,19 +100,19 @@ resource "aws_security_group" "allow_web_traffic" {
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
-
   egress {
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
+    description = "<write as you like>"
   }
-
   tags = {
     Name = "allow_web_traffic"
   }
 }
+
 # 7: Create a network interface with an ip in the subnet that was created in step 4
 
 resource "aws_network_interface" "web_server_nic" {
