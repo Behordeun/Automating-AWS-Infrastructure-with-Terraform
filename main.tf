@@ -1,7 +1,15 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "= 4.0.0"
+    }
+  }
+}
 provider "aws" {
-    region = "us-east-1"
-    access_key="AKIA6N6COK6MAHVAGIGJ"
-    secret_key="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"
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
+  region = var.aws_region
 }
 
 # 1: Create a vpc
@@ -159,3 +167,11 @@ resource "aws_instance" "web_server" {
         Name = "web_server"
       }
 }
+
+#terraform {
+#  backend "s3" {
+#    bucket = "muhammad-aws-terraform"
+#    key    = "s3://muhammad-aws-terraform/rootkey.csv"
+#    region = "us-east-1"
+#  }
+#}
