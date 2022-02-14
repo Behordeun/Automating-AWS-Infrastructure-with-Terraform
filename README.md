@@ -1,13 +1,13 @@
 # Automating-AWS-Infrastructure-with-Terraform
 
-This project aims at introducing beginners to ***Cloud Infrastructure Automation: A case study of Amazon Web Service (AWS)***.
+This project introduces beginners to ***Cloud Infrastructure Automation: A case study of Amazon Web Service (AWS)***.
 
 **Prerequisites**
 
 1. Terraform installation:
 
-* This can be downloaded [here](https://www.terraform.io/downloads). Choose the right installation package for your operating system (OS). Choose **amd64** if you run an x64 processor-based computer.
-* For windows, create a folder named **terraform**, and copy (or cut) the downloaded terraform file into the created folder. This can be achieved from the terminal by running:
+* This can be downloaded [here](https://www.terraform.io/downloads). Choose the correct installation package for your operating system (OS). Choose **amd64** if you run an x64 processor-based computer.
+* For windows, create a terraform folder and copy (or cut) the downloaded terraform file into the created folder. This can be achieved from the terminal by running:
 
   ```
   cd
@@ -15,13 +15,13 @@ This project aims at introducing beginners to ***Cloud Infrastructure Automation
   cd terraform
   copy <path to the downloaded terraform file/terraform.exe> c:/terraform
   ```
-* navigate to **environment variables** under **system properties** and add **c:/terraform** to your path. Alternatively, this can be achieved from the terminal by running:
+* Navigate to **environment variables** under **system properties** and add **c:/terraform** to your path. Alternatively, this can be achieved from the terminal by running:
 
   ```
   export PATH=$PATH:~/terraform
   ```
 
-2. Creation of ***AWS account***: You can create a trial account that comes with 300 USD free credit which is valid for 12 months. This can be done [here](https://portal.aws.amazon.com/billing/signup?refid=ps_a134p000003yhmnaae&trkcampaign=acq_paid_search_brand&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start). Simply fill out the necessary details, and you are good to go with your free tier account.
+2. Creation of ***AWS account***: You can create a trial account that comes with 300 USD free credit, which is valid for 12 months. This can be done [here](https://portal.aws.amazon.com/billing/signup?refid=ps_a134p000003yhmnaae&trkcampaign=acq_paid_search_brand&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start). Simply fill out the necessary details, and you are good to go with your free tier account.
 3. Navigate to ***IAM*** under your ***AWS Console*** and click on ***Key Management***. Create a new key pair, download the IAM key (please keep this secured, as you only get to see the credentials on your AWS console once, except for the downloaded CSV file containing the credentials).
 4. Download ***AWS CLI***. See the installation guide [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 5. Download the appropriate version of ***Microsoft Visual Studio Code (VSC)*** for your computer [here](https://code.visualstudio.com/download). Please note that you can use any ***IDE*** of your choice. However, VSC is the most recommended for this project.
