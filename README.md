@@ -213,7 +213,7 @@ resource "aws_instance" "web_server" {
 
 **NB:**
 
-    The above resources are present in***main.tf*** file.
+    The above resources are present in ***main.tf*** file.
 
 For the sake of deployment to a public domain, we shall create additional files such as **variables.tf**, and **terraform.tfvars**
 
