@@ -6,6 +6,7 @@ terraform {
     }
   }
 }
+
 provider "aws" {
   access_key = var.aws_access_key
   secret_key = var.aws_secret_key
@@ -168,10 +169,3 @@ resource "aws_instance" "web_server" {
       }
 }
 
-#terraform {
-#  backend "s3" {
-#    bucket = "muhammad-aws-terraform"
-#    key    = "s3://muhammad-aws-terraform/rootkey.csv"
-#    region = "us-east-1"
-#  }
-#}
