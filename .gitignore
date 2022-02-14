@@ -30,4 +30,4 @@ override.tf.json
 
 .env
 .config
-main-tf.md
+.terraform.lock.hcl
