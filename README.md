@@ -213,12 +213,8 @@ resource "aws_instance" "web_server" {
 
 **NB:**
 
-<<<<<<< HEAD
 1. The above resources are present in the ***main.tf*** file.
-2. You should try to avoid setting **cidr_block** to ***0.0.0.0/0***. This allows for connection to the instance from anywhere, and makes it vulnerable. Hence, you should try to use a specific IP address.
-=======
-    The above resources are present in ***main.tf*** file.
->>>>>>> c79b88b6d0d579746e819babaeecf91352e362b5
+2. You should try to avoid setting **cidr_block** to ***0.0.0.0/0***. This allows for connection to the instance from anywhere and makes it vulnerable. Hence, you should try to use a specific IP address. The above resources are present in the ***main.tf*** file.
 
 For the sake of deployment to a public domain, we shall create additional files such as **variables.tf**, and **terraform.tfvars**
 
