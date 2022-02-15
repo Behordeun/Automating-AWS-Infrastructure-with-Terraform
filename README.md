@@ -213,7 +213,8 @@ resource "aws_instance" "web_server" {
 
 **NB:**
 
-    The above resources are present in***main.tf*** file.
+1. The above resources are present in the ***main.tf*** file.
+2. You should try to avoid setting **cidr_block** to ***0.0.0.0/0***. This allows for connection to the instance from anywhere, and makes it vulnerable. Hence, you should try to use a specific IP address.
 
 For the sake of deployment to a public domain, we shall create additional files such as **variables.tf**, and **terraform.tfvars**
 
@@ -275,14 +276,13 @@ terraform plan
 terraform apply
 ```
 
-If you run **terraform apply**, you will get a prompt to type **yes**. If you don't want to get any prompt, run
+If you run **terraform apply**, you will get a prompt to type **yes**. If you do not want to get any prompt, run
 
 ```
 terraform apply -auto-approve
 ```
 
 Feel free to fork this repo, raise a **pull request** to contribute to this project, and raise an issue if you encounter any challenge.
-
 
 __About the author:__
 
